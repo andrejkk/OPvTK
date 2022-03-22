@@ -13,6 +13,7 @@ import networkx as nx
 def get_ShortestPath(G, s_v, t_v):
 
     shortest_p = nx.shortest_path(G, s_v, t_v, weight='weight')
+    
     return shortest_p
 
 
@@ -29,6 +30,6 @@ def is_correctQ(G, s_v, t_v, shortest_p):
     if shortest_p[-1] != t_v:
         correctQ = False
     if not nx.has_path(G, s_v, t_v):
-       correctQ = False   
+        correctQ = False   
        
     return correctQ
